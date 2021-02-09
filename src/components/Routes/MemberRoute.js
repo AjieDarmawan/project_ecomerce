@@ -19,7 +19,7 @@ const MemberRoute = ({
         ok ? (
           <Component {...props} />
         ) : path === "/joined/:class" ? (
-          <Redirect to={'/login'} />
+          <Redirect to={`/login?path=${location.pathname}`} />
         ) : (
           <Redirect to={`/`} />
         )

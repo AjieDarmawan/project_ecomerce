@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
 
-export default function footer () {
+function footer () {
   return (
     <>
       <footer id='footer'>
@@ -220,3 +221,5 @@ export default function footer () {
     </>
   )
 }
+
+export default withRouter(footer);

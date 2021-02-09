@@ -37,8 +37,8 @@ function App () {
       <GuestRoute path='/login' component={Login}></GuestRoute>
       <GuestRoute path='/Register' component={Register}></GuestRoute>
 
-      <MemberRoute path='/Cart' component={Cart}></MemberRoute>
-      <MemberRoute path='/checkout' component={Checkout}></MemberRoute>
+      {/* <MemberRoute path='/Cart' component={Cart}></MemberRoute> */}
+      {/* <MemberRoute path='/checkout' component={Checkout}></MemberRoute> */}
 
 
       <Route path='/' exact component={Home}></Route>

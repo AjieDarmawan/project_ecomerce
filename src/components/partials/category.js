@@ -3,8 +3,9 @@ import Sidebar from './sidebar'
 import FuturesItem from '../futuresItem'
 import Category_tab from '../category_tab'
 import Recomended from '../recomended'
+import { Link, withRouter } from 'react-router-dom'
 
-export default function category () {
+ function category () {
   return (
     <>
       <section>
@@ -26,3 +27,4 @@ export default function category () {
     </>
   )
 }
+export default withRouter(category);

@@ -62,7 +62,7 @@ function Login ({ history }) {
            path:/; 
            ${production}`
 
-          history.push(redirect || '/cart')
+          history.push(redirect || '/')
         })
       })
       .catch(err => {})
