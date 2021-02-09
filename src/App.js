@@ -17,6 +17,7 @@ import React, { useEffect } from 'react'
 import Register from './pages/Register'
 import GuestRoute from './components/Routes/GuestRoute'
 import MemberRoute from './components/Routes/MemberRoute'
+import profile from './pages/profile'
 
 function App () {
   const dispatch = useDispatch()
@@ -26,7 +27,6 @@ function App () {
     if (localStorage.getItem('BWAMICRO:token')) {
       session = JSON.parse(localStorage.getItem('BWAMICRO:token'))
       setAuthorizationHeader(session.token)
-
       users.details().then(details => {
         dispatch(populateProfile(details.data))
       })
@@ -40,6 +40,7 @@ function App () {
       {/* <MemberRoute path='/Cart' component={Cart}></MemberRoute> */}
       {/* <MemberRoute path='/checkout' component={Checkout}></MemberRoute> */}
 
+      <Route path='/profile' component={profile}></Route>
 
       <Route path='/' exact component={Home}></Route>
       <Route path='/contact' component={Contact}></Route>

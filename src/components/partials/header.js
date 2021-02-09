@@ -22,7 +22,7 @@ function Header ({ match, history }) {
     console.log(userCookies)
   }, [])
 
-  const USERS = useSelector(state => state.users)
+
 
   function logout () {
     users.logout().then(() => {
