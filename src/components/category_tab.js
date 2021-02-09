@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link}  from 'react-router-dom'
 
 export default function category_tab() {
     return (
@@ -7,29 +8,29 @@ export default function category_tab() {
                 <div className='col-sm-12'>
                   <ul className='nav nav-tabs'>
                     <li className='active'>
-                      <a href='#tshirt' data-toggle='tab'>
+                      <Link href='#tshirt' data-toggle='tab'>
                         T-Shirt
-                      </a>
+                     </Link>
                     </li>
                     <li>
-                      <a href='#blazers' data-toggle='tab'>
+                      <Link href='#blazers' data-toggle='tab'>
                         Blazers
-                      </a>
+                     </Link>
                     </li>
                     <li>
-                      <a href='#sunglass' data-toggle='tab'>
+                      <Link href='#sunglass' data-toggle='tab'>
                         Sunglass
-                      </a>
+                     </Link>
                     </li>
                     <li>
-                      <a href='#kids' data-toggle='tab'>
+                      <Link href='#kids' data-toggle='tab'>
                         Kids
-                      </a>
+                     </Link>
                     </li>
                     <li>
-                      <a href='#poloshirt' data-toggle='tab'>
+                      <Link href='#poloshirt' data-toggle='tab'>
                         Polo shirt
-                      </a>
+                     </Link>
                     </li>
                   </ul>
                 </div>
@@ -42,9 +43,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery1.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -56,9 +57,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery2.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -70,9 +71,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery3.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -84,9 +85,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery4.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -101,9 +102,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery4.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -115,9 +116,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery3.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -129,9 +130,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery2.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -143,9 +144,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery1.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -160,9 +161,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery3.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -174,9 +175,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery4.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -188,9 +189,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery1.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -202,9 +203,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery2.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -219,9 +220,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery1.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -233,9 +234,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery2.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -247,9 +248,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery3.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -261,9 +262,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery4.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -278,9 +279,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery2.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -292,9 +293,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery4.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -306,9 +307,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery3.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>
@@ -320,9 +321,9 @@ export default function category_tab() {
                             <img src='assets/images/home/gallery1.jpg' alt='' />
                             <h2>$56</h2>
                             <p>Easy Polo Black Edition</p>
-                            <a href='#' className='btn btn-default add-to-cart'>
+                            <Link href='#' className='btn btn-default add-to-cart'>
                               <i className='fa fa-shopping-cart'></i>Add to cart
-                            </a>
+                           </Link>
                           </div>
                         </div>
                       </div>

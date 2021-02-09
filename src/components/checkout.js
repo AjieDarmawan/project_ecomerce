@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/partials/header'
 import Footer from '../components/partials/footer'
+import {Link} from 'react-router-dom'
 
 export default function checkout () {
   return (
@@ -11,7 +12,7 @@ export default function checkout () {
           <div className='breadcrumbs'>
             <ol className='breadcrumb'>
               <li>
-                <a href='#'>Home</a>
+                <Link href='#'>Home</Link>
               </li>
               <li className='active'>Check out</li>
             </ol>
@@ -36,9 +37,9 @@ export default function checkout () {
                 </label>
               </li>
               <li>
-                <a href=''>
+                <Link href=''>
                   <i className='fa fa-times'></i>Cancel
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,12 +61,12 @@ export default function checkout () {
                     <input type='password' placeholder='Password' />
                     <input type='password' placeholder='Confirm password' />
                   </form>
-                  <a className='btn btn-primary' href=''>
+                  <Link className='btn btn-primary' href=''>
                     Get Quotes
-                  </a>
-                  <a className='btn btn-primary' href=''>
+                  </Link>
+                  <Link className='btn btn-primary' href=''>
                     Continue
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='col-sm-5 clearfix'>
@@ -150,13 +151,13 @@ export default function checkout () {
               <tbody>
                 <tr>
                   <td className='cart_product'>
-                    <a href=''>
+                    <Link href=''>
                       <img src='images/cart/one.png' alt='' />
-                    </a>
+                    </Link>
                   </td>
                   <td className='cart_description'>
                     <h4>
-                      <a href=''>Colorblock Scuba</a>
+                      <Link href=''>Colorblock Scuba</Link>
                     </h4>
                     <p>Web ID: 1089772</p>
                   </td>
@@ -165,10 +166,10 @@ export default function checkout () {
                   </td>
                   <td className='cart_quantity'>
                     <div className='cart_quantity_button'>
-                      <a className='cart_quantity_up' href=''>
+                      <Link className='cart_quantity_up' href=''>
                         {' '}
                         +{' '}
-                      </a>
+                      </Link>
                       <input
                         className='cart_quantity_input'
                         type='text'
@@ -177,29 +178,29 @@ export default function checkout () {
                         autocomplete='off'
                         size='2'
                       />
-                      <a className='cart_quantity_down' href=''>
+                      <Link className='cart_quantity_down' href=''>
                         {' '}
                         -{' '}
-                      </a>
+                      </Link>
                     </div>
                   </td>
                   <td className='cart_total'>
                     <p className='cart_total_price'>$59</p>
                   </td>
                   <td className='cart_delete'>
-                    <a className='cart_quantity_delete' href=''>
+                    <Link className='cart_quantity_delete' href=''>
                       <i className='fa fa-times'></i>
-                    </a>
+                    </Link>
                   </td>
                 </tr>
 
                 <tr>
                   <td className='cart_product'>
-                    {/* <a href=""><img src="images/cart/two.png" alt="" > </a> */}
+                    {/* <Link href=""><img src="images/cart/two.png" alt="" > </Link> */}
                   </td>
                   <td className='cart_description'>
                     <h4>
-                      <a href=''>Colorblock Scuba</a>
+                      <Link href=''>Colorblock Scuba</Link>
                     </h4>
                     <p>Web ID: 1089772</p>
                   </td>
@@ -208,10 +209,10 @@ export default function checkout () {
                   </td>
                   <td className='cart_quantity'>
                     <div className='cart_quantity_button'>
-                      <a className='cart_quantity_up' href=''>
+                      <Link className='cart_quantity_up' href=''>
                         {' '}
                         +{' '}
-                      </a>
+                      </Link>
                       <input
                         className='cart_quantity_input'
                         type='text'
@@ -220,30 +221,30 @@ export default function checkout () {
                         autocomplete='off'
                         size='2'
                       />
-                      <a className='cart_quantity_down' href=''>
+                      <Link className='cart_quantity_down' href=''>
                         {' '}
                         -{' '}
-                      </a>
+                      </Link>
                     </div>
                   </td>
                   <td className='cart_total'>
                     <p className='cart_total_price'>$59</p>
                   </td>
                   <td className='cart_delete'>
-                    <a className='cart_quantity_delete' href=''>
+                    <Link className='cart_quantity_delete' href=''>
                       <i className='fa fa-times'></i>
-                    </a>
+                    </Link>
                   </td>
                 </tr>
                 <tr>
                   <td className='cart_product'>
-                    <a href=''>
+                    <Link href=''>
                       <img src='images/cart/three.png' alt='' />
-                    </a>
+                    </Link>
                   </td>
                   <td className='cart_description'>
                     <h4>
-                      <a href=''>Colorblock Scuba</a>
+                      <Link href=''>Colorblock Scuba</Link>
                     </h4>
                     <p>Web ID: 1089772</p>
                   </td>
@@ -252,10 +253,10 @@ export default function checkout () {
                   </td>
                   <td className='cart_quantity'>
                     <div className='cart_quantity_button'>
-                      <a className='cart_quantity_up' href=''>
+                      <Link className='cart_quantity_up' href=''>
                         {' '}
                         +{' '}
-                      </a>
+                      </Link>
                       <input
                         className='cart_quantity_input'
                         type='text'
@@ -264,19 +265,19 @@ export default function checkout () {
                         autocomplete='off'
                         size='2'
                       />
-                      <a className='cart_quantity_down' href=''>
+                      <Link className='cart_quantity_down' href=''>
                         {' '}
                         -{' '}
-                      </a>
+                      </Link>
                     </div>
                   </td>
                   <td className='cart_total'>
                     <p className='cart_total_price'>$59</p>
                   </td>
                   <td className='cart_delete'>
-                    <a className='cart_quantity_delete' href=''>
+                    <Link className='cart_quantity_delete' href=''>
                       <i className='fa fa-times'></i>
-                    </a>
+                    </Link>
                   </td>
                 </tr>
                 <tr>

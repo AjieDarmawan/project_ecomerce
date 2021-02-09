@@ -1,32 +1,38 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import propTypes from 'prop-types'
+import users from '../../constants/api/users'
+import { useCookies } from 'react-cookie'
 
 import { Link, withRouter } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-function Header ({ onLight, location }) {
-
-  const [User, setUser] = useState(()=>null)
+function Header ({ match, history }) {
+  const [User, setUser] = useState(() => null)
+  const [cookies, setCookie, removeCookie] = useCookies(['BWAMICRO:user'])
 
   useEffect(() => {
     // console.log(decodeURIComponent(window.document.cookie))
-    const userCookies = decodeURIComponent(window.document.cookie)?.split(";")?.find?.(item => item.indexOf("BWAMICRO:user") > -1)?.split("=")[1] ?? null;
+    const userCookies =
+      decodeURIComponent(window.document.cookie)
+        ?.split(';')
+        ?.find?.(item => item.indexOf('BWAMICRO:user') > -1)
+        ?.split('=')[1] ?? null
+
     setUser(userCookies ? JSON.parse(userCookies) : null)
     console.log(userCookies)
-
   }, [])
-  // const linkColor = onLight ? 'text-white sm:text-gray-900 ' : 'text-white'
 
-  // const [toggleMenu, setToggleMenu] = React.useState(false)
+  const USERS = useSelector(state => state.users)
 
-  // const linkCTA =
-  //   location.pathname.indexOf('/login') > -1 ? `/register` : `/login`
-  // const textCTA = location.pathname.indexOf('/login') > -1 ? 'Daftar' : 'Masuk'
+  function logout () {
+    users.logout().then(() => {
+      removeCookie('BWAMICRO:user')
+      localStorage.removeItem('BWAMICRO:token')
+      console.log('success dihapus')
+      history.push('/login')
+    })
+  }
 
-  // const classNameLogo = onLight
-  //   ? toggleMenu
-  //     ? 'on-dark'
-  //     : 'on-light'
-  //   : 'on-light'
   return (
     <>
       <header id='header'>
@@ -161,13 +167,11 @@ function Header ({ onLight, location }) {
                         <i className='fa fa-lock'></i> Login
                       </Link> */}
 
-{
-                            User ? (
-                              <Link to={'/login'}>Hi , {User.name}</Link>
-                            ) : 
-                            <Link to={'/login'}>Login </Link>
-                          } 
-
+                      {User ? (
+                        <Link to={'/profile'}>Hi , {User.name}</Link>
+                      ) : (
+                        <Link to={'/login'}>Login </Link>
+                      )}
 
                       {/* <Link
                         to={linkCTA}
@@ -175,6 +179,20 @@ function Header ({ onLight, location }) {
                       >
                         {textCTA}
                       </Link> */}
+                    </li>
+                    <li>
+                      {User ? (
+                        <button
+                          className={[
+                            'nav-link relative text-indigo-500 flex items-center py-3 px-5 transition-all duration-200 hover:text-white active:text-white focus:outline-none w-full text-left'
+                          ].join(' ')}
+                          onClick={logout}
+                        >
+                          Logout
+                        </button>
+                      ) : (
+                        <Link to={'/Register'}>Daftar </Link>
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -225,13 +243,11 @@ function Header ({ onLight, location }) {
                           <Link to={'/cart'}>Cart</Link>
                         </li>
                         <li>
-                          {
-                            User ? (
-                              <Link to={'/login'}>Hi , {User.name}</Link>
-                            ) : 
+                          {User ? (
+                            <Link to={'/login'}>Hi , {User.name}</Link>
+                          ) : (
                             <Link to={'/login'}>Login </Link>
-                          }
-                          
+                          )}
                         </li>
                       </ul>
                     </li>
@@ -270,4 +286,5 @@ function Header ({ onLight, location }) {
   )
 }
 
-export default Header
+// export default Header
+export default withRouter(Header);

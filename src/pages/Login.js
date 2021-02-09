@@ -4,11 +4,13 @@ import Footer from '../components/partials/footer'
 import useForm from '../helpers/hooks/useForm'
 import users from '../constants/api/users'
 
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setAuthorizationHeader } from '../configs/axios'
 
 import { populateProfile } from '../store/actions/users'
+import Input from '../components/Form/Input'
+import Select from '../components/Form/Select'
 
 function Login ({ history }) {
   const dispatch = useDispatch()
@@ -55,7 +57,10 @@ function Login ({ history }) {
 
           document.cookie = `BWAMICRO:user=${JSON.stringify(
             userCookie
-          )}; expires=${expires.toUTCString()}; path:/; ${production}`
+          )}; 
+          expires=${expires.toUTCString()};
+           path:/; 
+           ${production}`
 
           history.push(redirect || '/cart')
         })
@@ -68,7 +73,7 @@ function Login ({ history }) {
       <section id='form'>
         <div className='container'>
           <div className='row'>
-            <div className='col-sm-4 col-sm-offset-1'>
+            <div className='col-sm-8'>
               <div className='login-form'>
                 <h2>Login to your account</h2>
                 <form onSubmit={submit}>
@@ -88,28 +93,18 @@ function Login ({ history }) {
                     value={password}
                     placeholder='Your email addres'
                   />
+
                   <button type='submit' className='btn btn-default'>
                     Login
                   </button>
                 </form>
               </div>
             </div>
-            <div className='col-sm-1'>
-              <h2 className='or'>OR</h2>
-            </div>
-            <div className='col-sm-4'>
-              <div className='signup-form'>
-                <h2>New User Signup!</h2>
-                <form action='#'>
-                  <input type='text' placeholder='Name' />
-                  <input type='email' placeholder='Email Address' />
-                  <input type='password' placeholder='Password' />
-                  <button type='submit' className='btn btn-default'>
-                    Signup
-                  </button>
-                </form>
-              </div>
-            </div>
+            <br />
+
+            {/* <Link to={'/Register'} className='btn btn-primary btn-sm'>
+              Register
+            </Link> */}
           </div>
         </div>
       </section>

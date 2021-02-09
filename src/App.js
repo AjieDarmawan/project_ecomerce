@@ -14,6 +14,9 @@ import users from './constants/api/users'
 
 import { populateProfile } from './store/actions/users'
 import React, { useEffect } from 'react'
+import Register from './pages/Register'
+import GuestRoute from './components/Routes/GuestRoute'
+import MemberRoute from './components/Routes/MemberRoute'
 
 function App () {
   const dispatch = useDispatch()
@@ -31,11 +34,15 @@ function App () {
   }, [dispatch])
   return (
     <Router history={history}>
+      <GuestRoute path='/login' component={Login}></GuestRoute>
+      <GuestRoute path='/Register' component={Register}></GuestRoute>
+
+      <MemberRoute path='/Cart' component={Cart}></MemberRoute>
+      <MemberRoute path='/checkout' component={Checkout}></MemberRoute>
+
+
       <Route path='/' exact component={Home}></Route>
-      <Route path='/login' component={Login}></Route>
       <Route path='/contact' component={Contact}></Route>
-      <Route path='/Cart' component={Cart}></Route>
-      <Route path='/checkout' component={Checkout}></Route>
       <Route path='/detailProduct/:id' component={detailProduct}></Route>
     </Router>
   )
